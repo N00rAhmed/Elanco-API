@@ -6,8 +6,8 @@ namespace Elanco_API.Services
     {
         List<AnimalActivity> Get();
         AnimalActivity Get(string id);
-        AnimalActivity Create(AnimalActivity student);
-        void Update(string id, AnimalActivity student);
+        AnimalActivity Create(AnimalActivity animal_activity_data);
+        void Update(string id, AnimalActivity animal_activity_data);
         void Remove(string id);
 
     }

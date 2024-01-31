@@ -8,17 +8,17 @@ namespace Elanco_API.Controllers
     [Route("[controller]")]
     public class AnimalActivityController : ControllerBase
     {
-        private readonly Http_Requests bookService;
+        private readonly Http_Requests functionality;
 
         public AnimalActivityController(Http_Requests bookService)
         {
-            this.bookService = bookService;
+            this.functionality = bookService;
         }
         // GET: api/<StudentsController>
         [HttpGet]
         public ActionResult<List<AnimalActivity>> Get()
         {
-            return bookService.Get();
+            return functionality.Get();
         }
 
     }

@@ -5,21 +5,21 @@ namespace Elanco_API.Services
 {
     public class Functionality : Http_Requests
     {
-        private readonly IMongoCollection<AnimalActivity> _books;
+        private readonly IMongoCollection<AnimalActivity> animal_data;
 
         public Functionality(IStoreDatabaseSettings settings, IMongoClient mongoClient) 
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
-            _books = database.GetCollection<AnimalActivity>(settings.CollectionName);
+            animal_data = database.GetCollection<AnimalActivity>(settings.CollectionName);
         }
-        public AnimalActivity Create(AnimalActivity book)
+        public AnimalActivity Create(AnimalActivity animal_activity_data)
         {
             throw new NotImplementedException();
         }
 
         public List<AnimalActivity> Get()
         {
-            return _books.Find(book => true).ToList();
+            return animal_data.Find(animal_activity_data => true).ToList();
 
             /*            throw new NotImplementedException();
             */
@@ -35,7 +35,7 @@ namespace Elanco_API.Services
             throw new NotImplementedException();
         }
 
-        public void Update(string id, AnimalActivity student)
+        public void Update(string id, AnimalActivity animal_activity_data)
         {
             throw new NotImplementedException();
         }
