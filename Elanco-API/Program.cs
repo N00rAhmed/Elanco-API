@@ -16,7 +16,7 @@ builder.Services.AddSingleton<IStoreDatabaseSettings>(sp =>
 builder.Services.AddSingleton<IMongoClient>(s =>
         new MongoClient(builder.Configuration.GetValue<string>("StoreDatabaseSettings:ConnectionString")));
 
-builder.Services.AddScoped<IService, BookService>();
+builder.Services.AddScoped<Http_Requests, Functionality>();
 
 
 

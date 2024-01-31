@@ -3,21 +3,21 @@ using MongoDB.Driver;
 
 namespace Elanco_API.Services
 {
-    public class BookService : IService
+    public class Functionality : Http_Requests
     {
-        private readonly IMongoCollection<WeatherForecast> _books;
+        private readonly IMongoCollection<AnimalActivity> _books;
 
-        public BookService(IStoreDatabaseSettings settings, IMongoClient mongoClient) 
+        public Functionality(IStoreDatabaseSettings settings, IMongoClient mongoClient) 
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
-            _books = database.GetCollection<WeatherForecast>(settings.CollectionName);
+            _books = database.GetCollection<AnimalActivity>(settings.CollectionName);
         }
-        public WeatherForecast Create(WeatherForecast book)
+        public AnimalActivity Create(AnimalActivity book)
         {
             throw new NotImplementedException();
         }
 
-        public List<WeatherForecast> Get()
+        public List<AnimalActivity> Get()
         {
             return _books.Find(book => true).ToList();
 
@@ -25,7 +25,7 @@ namespace Elanco_API.Services
             */
         }
 
-        public WeatherForecast Get(string id)
+        public AnimalActivity Get(string id)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +35,7 @@ namespace Elanco_API.Services
             throw new NotImplementedException();
         }
 
-        public void Update(string id, WeatherForecast student)
+        public void Update(string id, AnimalActivity student)
         {
             throw new NotImplementedException();
         }

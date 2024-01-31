@@ -6,17 +6,17 @@ namespace Elanco_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class AnimalActivityController : ControllerBase
     {
-        private readonly IService bookService;
+        private readonly Http_Requests bookService;
 
-        public WeatherForecastController(IService bookService)
+        public AnimalActivityController(Http_Requests bookService)
         {
             this.bookService = bookService;
         }
         // GET: api/<StudentsController>
         [HttpGet]
-        public ActionResult<List<WeatherForecast>> Get()
+        public ActionResult<List<AnimalActivity>> Get()
         {
             return bookService.Get();
         }

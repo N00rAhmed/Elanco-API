@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Elanco_API.Models
 {
-    public class WeatherForecast
+    public class AnimalActivity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
